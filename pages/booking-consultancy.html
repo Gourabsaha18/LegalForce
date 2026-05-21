@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Book Legal Consultation | LegalForce</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f4f7fb;
+color:#222;
+}
+
+/* HEADER */
+
+header{
+
+background:#111;
+padding:20px 60px;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+position:sticky;
+top:0;
+z-index:999;
+}
+
+.logo{
+font-size:34px;
+font-weight:700;
+color:#fff;
+}
+
+.logo span{
+color:#ff2d2d;
+}
+
+nav{
+display:flex;
+gap:25px;
+align-items:center;
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+}
+
+.back-btn{
+
+background:#ff2d2d;
+
+padding:12px 18px;
+
+border-radius:8px;
+}
+
+/* PAGE */
+
+.page{
+
+padding:70px 60px;
+
+display:grid;
+
+grid-template-columns:
+1fr 420px;
+
+gap:40px;
+}
+
+/* LEFT */
+
+.booking-card{
+
+background:#fff;
+
+padding:45px;
+
+border-radius:25px;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.08);
+}
+
+.booking-card h1{
+
+font-size:48px;
+
+margin-bottom:10px;
+}
+
+.booking-card p{
+
+color:#666;
+
+margin-bottom:35px;
+}
+
+/* ADVOCATE */
+
+.advocate-box{
+
+display:flex;
+gap:25px;
+
+align-items:center;
+
+background:#f7f9fc;
+
+padding:25px;
+
+border-radius:20px;
+
+margin-bottom:35px;
+}
+
+.advocate-box img{
+
+width:120px;
+height:120px;
+
+border-radius:18px;
+
+object-fit:cover;
+border:3px solid #ff2d2d;
+}
+
+.advocate-details h2{
+
+font-size:30px;
+
+margin-bottom:10px;
+}
+
+.speciality{
+
+color:#ff2d2d;
+font-weight:600;
+
+margin-bottom:12px;
+}
+
+.rating{
+color:#ffb400;
+margin-bottom:12px;
+}
+
+.online{
+
+color:green;
+font-weight:600;
+}
+
+.extra-details{
+
+margin-top:12px;
+font-size:15px;
+color:#555;
+line-height:1.8;
+}
+
+/* FORM */
+
+form input,
+form select,
+form textarea{
+
+width:100%;
+
+padding:16px;
+
+margin-bottom:18px;
+
+border:1px solid #ddd;
+
+border-radius:12px;
+
+font-size:16px;
+
+outline:none;
+}
+
+form textarea{
+height:120px;
+resize:none;
+}
+
+/* CONSULT TYPE */
+
+.type-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(3,1fr);
+
+gap:15px;
+
+margin-bottom:25px;
+}
+
+.type-card{
+
+background:#f7f9fc;
+
+padding:20px;
+
+border-radius:18px;
+
+text-align:center;
+
+cursor:pointer;
+
+border:2px solid transparent;
+
+transition:.3s;
+}
+
+.type-card:hover{
+border-color:#ff2d2d;
+}
+
+.type-card.active{
+
+background:#ff2d2d;
+color:#fff;
+}
+
+.type-card i{
+
+font-size:28px;
+
+margin-bottom:10px;
+}
+
+/* SLOT */
+
+.slot-title{
+
+font-size:24px;
+
+margin-bottom:20px;
+}
+
+.slot-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(4,1fr);
+
+gap:15px;
+
+margin-bottom:30px;
+}
+
+.slot{
+
+padding:14px;
+
+background:#f7f9fc;
+
+border-radius:12px;
+
+text-align:center;
+
+cursor:pointer;
+
+transition:.3s;
+}
+
+.slot:hover{
+background:#ff2d2d;
+color:#fff;
+}
+
+.slot.active{
+background:#111;
+color:#fff;
+}
+
+/* RIGHT */
+
+.summary{
+
+background:#fff;
+
+padding:35px;
+
+border-radius:25px;
+
+height:fit-content;
+
+position:sticky;
+top:110px;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.08);
+}
+
+.summary h2{
+
+font-size:34px;
+
+margin-bottom:30px;
+}
+
+.summary-box{
+
+margin-bottom:22px;
+
+display:flex;
+justify-content:space-between;
+
+font-size:17px;
+}
+
+.line{
+height:1px;
+background:#ddd;
+margin:25px 0;
+}
+
+.total{
+
+font-size:30px;
+font-weight:700;
+
+color:#ff2d2d;
+}
+
+.pay-btn{
+
+width:100%;
+
+background:#ff2d2d;
+color:#fff;
+
+border:none;
+
+padding:18px;
+
+border-radius:14px;
+
+font-size:18px;
+font-weight:600;
+
+cursor:pointer;
+
+margin-top:25px;
+
+transition:.3s;
+}
+
+.pay-btn:hover{
+background:#111;
+}
+
+/* FEATURES */
+
+.features{
+
+margin-top:30px;
+}
+
+.features p{
+
+margin-bottom:15px;
+
+display:flex;
+gap:10px;
+align-items:center;
+
+color:#555;
+}
+
+.features i{
+color:#ff2d2d;
+}
+
+/* MOBILE */
+
+@media(max-width:1000px){
+
+.page{
+grid-template-columns:1fr;
+}
+
+.summary{
+position:relative;
+top:0;
+}
+
+}
+
+@media(max-width:768px){
+
+header{
+padding:18px 20px;
+}
+
+.page{
+padding:40px 20px;
+}
+
+.booking-card{
+padding:30px 20px;
+}
+
+.booking-card h1{
+font-size:36px;
+}
+
+.advocate-box{
+flex-direction:column;
+text-align:center;
+}
+
+.slot-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.type-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="logo">
+Legal<span>Force</span>
+</div>
+
+<nav>
+
+<a href="consultancy.html"
+class="back-btn">
+
+Back To Consultancy
+
+</a>
+
+</nav>
+
+</header>
+
+<!-- PAGE -->
+
+<section class="page">
+
+<!-- LEFT SIDE -->
+
+<div class="booking-card">
+
+<h1>
+
+Book Consultation
+
+</h1>
+
+<p>
+
+Complete your booking and connect instantly with a legal expert.
+
+</p>
+
+<!-- ADVOCATE -->
+
+<div class="advocate-box">
+
+<img id="advImg"
+src="../assets/images/default.jpg">
+
+<div class="advocate-details">
+
+<h2 id="advName">
+
+Advocate Name
+
+</h2>
+
+<div class="speciality"
+id="advSpeciality">
+
+Law Specialist
+
+</div>
+
+<div class="rating">
+
+★★★★★ 4.9
+
+</div>
+
+<div class="online">
+
+● Online Now
+
+</div>
+
+<div class="extra-details">
+
+<div>
+<b>Qualification:</b>
+<span id="advQualification">
+LL.B
+</span>
+</div>
+
+<div>
+<b>Phone:</b>
+<span id="advPhone">
+0000000000
+</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- FORM -->
+
+<form>
+
+<input type="text"
+placeholder="Full Name"
+required>
+
+<input type="email"
+placeholder="Email Address"
+required>
+
+<input type="tel"
+placeholder="Phone Number"
+required>
+
+<textarea placeholder="Describe Your Legal Issue"></textarea>
+
+<!-- CONSULT TYPES -->
+
+<h3 class="slot-title">
+
+Select Consultation Type
+
+</h3>
+
+<div class="type-grid">
+
+<div class="type-card active"
+onclick="selectType(this,'Chat',1)">
+
+<i class="fa-solid fa-comments"></i>
+
+<h4>Chat</h4>
+
+<p>1x Rate</p>
+
+</div>
+
+<div class="type-card"
+onclick="selectType(this,'Voice Call',1.5)">
+
+<i class="fa-solid fa-phone"></i>
+
+<h4>Call</h4>
+
+<p>1.5x Rate</p>
+
+</div>
+
+<div class="type-card"
+onclick="selectType(this,'Video Call',2)">
+
+<i class="fa-solid fa-video"></i>
+
+<h4>Video</h4>
+
+<p>2x Rate</p>
+
+</div>
+
+</div>
+
+<!-- DATE -->
+
+<input type="date">
+
+<!-- TIME SLOTS -->
+
+<h3 class="slot-title">
+
+Available Time Slots
+
+</h3>
+
+<div class="slot-grid">
+
+<div class="slot active"
+onclick="selectSlot(this)">
+
+10:00 AM
+
+</div>
+
+<div class="slot"
+onclick="selectSlot(this)">
+
+11:30 AM
+
+</div>
+
+<div class="slot"
+onclick="selectSlot(this)">
+
+01:00 PM
+
+</div>
+
+<div class="slot"
+onclick="selectSlot(this)">
+
+03:30 PM
+
+</div>
+
+<div class="slot"
+onclick="selectSlot(this)">
+
+05:00 PM
+
+</div>
+
+<div class="slot"
+onclick="selectSlot(this)">
+
+07:00 PM
+
+</div>
+
+<div class="slot"
+onclick="selectSlot(this)">
+
+08:30 PM
+
+</div>
+
+<div class="slot"
+onclick="selectSlot(this)">
+
+10:00 PM
+
+</div>
+
+</div>
+
+<!-- MINUTES -->
+
+<input type="number"
+id="minutes"
+placeholder="Enter Consultation Minutes"
+onkeyup="calculateTotal()">
+
+</form>
+
+</div>
+
+<!-- RIGHT SIDE -->
+
+<div class="summary">
+
+<h2>
+
+Booking Summary
+
+</h2>
+
+<div class="summary-box">
+
+<span>Advocate</span>
+
+<b id="summaryAdv">
+
+-
+
+</b>
+
+</div>
+
+<div class="summary-box">
+
+<span>Consultation</span>
+
+<b id="summaryType">
+
+Chat
+
+</b>
+
+</div>
+
+<div class="summary-box">
+
+<span>Rate</span>
+
+<b>
+
+₹<span id="summaryRate">
+
+0
+
+</span>/min
+
+</b>
+
+</div>
+
+<div class="summary-box">
+
+<span>Minutes</span>
+
+<b id="summaryMinutes">
+
+0
+
+</b>
+
+</div>
+
+<div class="line"></div>
+
+<div class="summary-box total">
+
+<span>Total</span>
+
+<span>
+
+₹<span id="totalAmount">
+
+0
+
+</span>
+
+</span>
+
+</div>
+
+<button class="pay-btn"
+onclick="payment()">
+
+Proceed To Payment
+
+</button>
+
+<div class="features">
+
+<p>
+
+<i class="fa-solid fa-shield-halved"></i>
+
+100% Secure Booking
+
+</p>
+
+<p>
+
+<i class="fa-solid fa-bolt"></i>
+
+Instant Consultation
+
+</p>
+
+<p>
+
+<i class="fa-solid fa-headset"></i>
+
+24×7 Support
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+/* BASE RATE */
+
+let baseRate =
+localStorage.getItem('advRate') || 25;
+
+let currentMultiplier = 1;
+
+/* GET ADVOCATE DATA */
+
+const advName =
+localStorage.getItem('advName') ||
+'Adv. Rahul Sharma';
+
+const advSpeciality =
+localStorage.getItem('advSpeciality') ||
+'Criminal Lawyer';
+
+const advImage =
+localStorage.getItem('advImage') ||
+'../assets/images/default.jpg';
+
+const advQualification =
+localStorage.getItem('advQualification') ||
+'LL.B';
+
+const advPhone =
+localStorage.getItem('advPhone') ||
+'Not Available';
+
+/* SET ADVOCATE DATA */
+
+document.getElementById('advName')
+.innerText = advName;
+
+document.getElementById('advSpeciality')
+.innerText = advSpeciality;
+
+document.getElementById('advQualification')
+.innerText = advQualification;
+
+document.getElementById('advPhone')
+.innerText = advPhone;
+
+document.getElementById('summaryAdv')
+.innerText = advName;
+
+document.getElementById('summaryRate')
+.innerText = baseRate;
+
+document.getElementById('advImg')
+.src = advImage;
+
+/* CONSULT TYPE */
+
+function selectType(el,type,multiplier){
+
+document
+.querySelectorAll('.type-card')
+.forEach(card=>{
+card.classList.remove('active');
+});
+
+el.classList.add('active');
+
+currentMultiplier = multiplier;
+
+document.getElementById('summaryType')
+.innerText = type;
+
+calculateTotal();
+
+}
+
+/* SLOT */
+
+function selectSlot(el){
+
+document
+.querySelectorAll('.slot')
+.forEach(slot=>{
+slot.classList.remove('active');
+});
+
+el.classList.add('active');
+
+}
+
+/* TOTAL */
+
+function calculateTotal(){
+
+let mins =
+document.getElementById('minutes').value || 0;
+
+document.getElementById('summaryMinutes')
+.innerText = mins;
+
+let total =
+mins * baseRate * currentMultiplier;
+
+document.getElementById('totalAmount')
+.innerText = total;
+
+}
+
+/* PAYMENT */
+
+function payment(){
+
+let mins =
+document.getElementById('minutes').value;
+
+if(mins == '' || mins <= 0){
+
+alert('Please enter consultation minutes');
+
+return;
+
+}
+
+alert(
+'Consultation Booked Successfully!\n\nAdvocate: '
++ advName +
+'\nPhone: ' + advPhone +
+'\n\nRedirecting To Payment Gateway...'
+);
+
+}
+
+</script>
+
+</body>
+</html>

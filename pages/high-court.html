@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>High Courts | LegalForce</title>
+
+<link rel="preconnect"
+      href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet">
+
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#f4f7fb;
+  color:#222;
+}
+
+/* HEADER */
+
+.topbar{
+
+  background:#111;
+
+  padding:18px 60px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  position:sticky;
+  top:0;
+
+  z-index:999;
+}
+
+.logo{
+
+  color:white;
+
+  font-size:34px;
+  font-weight:700;
+}
+
+.logo span{
+  color:#ff2d2d;
+}
+
+.nav-links{
+
+  display:flex;
+  align-items:center;
+  gap:25px;
+}
+
+.nav-links a{
+
+  color:white;
+  text-decoration:none;
+
+  transition:.3s;
+}
+
+.nav-links a:hover{
+  color:#ff2d2d;
+}
+
+.home-btn{
+
+  background:#ff2d2d;
+
+  padding:12px 18px;
+
+  border-radius:8px;
+}
+
+/* HERO */
+
+.hero{
+
+  height:380px;
+
+  background:
+  linear-gradient(rgba(0,0,0,.7),
+  rgba(0,0,0,.7)),
+  url('https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1600&auto=format&fit=crop');
+
+  background-size:cover;
+  background-position:center;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  text-align:center;
+
+  color:white;
+}
+
+.hero-content h1{
+
+  font-size:64px;
+
+  margin-bottom:20px;
+}
+
+.hero-content p{
+
+  font-size:20px;
+
+  color:#ddd;
+
+  max-width:850px;
+}
+
+/* PAGE */
+
+.page-wrapper{
+  padding:70px 60px;
+}
+
+.section-title{
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  margin-bottom:50px;
+}
+
+.section-title h2{
+
+  font-size:42px;
+}
+
+.Legal-badge{
+
+  background:#ff2d2d;
+  color:white;
+
+  padding:10px 18px;
+
+  border-radius:50px;
+
+  font-size:14px;
+  font-weight:600;
+}
+
+/* GRID */
+
+.court-grid{
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(350px,1fr));
+
+  gap:35px;
+}
+
+/* CARD */
+
+.court-card{
+
+  background:white;
+
+  border-radius:22px;
+
+  overflow:hidden;
+
+  box-shadow:
+  0 10px 30px rgba(0,0,0,.08);
+
+  transition:.3s;
+}
+
+.court-card:hover{
+
+  transform:translateY(-8px);
+}
+
+.court-card img{
+
+  width:100%;
+  height:240px;
+
+  object-fit:cover;
+}
+
+.court-content{
+  padding:25px;
+}
+
+.court-tag{
+
+  display:inline-block;
+
+  background:#ff2d2d;
+  color:white;
+
+  padding:8px 16px;
+
+  border-radius:50px;
+
+  font-size:13px;
+  font-weight:600;
+
+  margin-bottom:18px;
+}
+
+.court-content h3{
+
+  font-size:26px;
+
+  line-height:1.5;
+
+  margin-bottom:15px;
+}
+
+.court-content p{
+
+  color:#666;
+
+  line-height:1.8;
+
+  margin-bottom:20px;
+}
+
+.court-footer{
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.court-footer span{
+
+  color:#888;
+  font-size:14px;
+}
+
+.read-btn{
+
+  text-decoration:none;
+
+  color:#ff2d2d;
+
+  font-weight:600;
+}
+
+/* STATS */
+
+.stats-section{
+
+  margin-top:90px;
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(250px,1fr));
+
+  gap:30px;
+}
+
+.stat-box{
+
+  background:white;
+
+  padding:40px;
+
+  border-radius:20px;
+
+  text-align:center;
+
+  box-shadow:
+  0 8px 25px rgba(0,0,0,.08);
+}
+
+.stat-box i{
+
+  font-size:45px;
+
+  color:#ff2d2d;
+
+  margin-bottom:20px;
+}
+
+.stat-box h3{
+
+  font-size:38px;
+
+  margin-bottom:10px;
+}
+
+.stat-box p{
+
+  color:#666;
+}
+
+/* FOOTER */
+
+.footer{
+
+  background:#111;
+  color:white;
+
+  padding:50px 30px;
+
+  text-align:center;
+
+  margin-top:90px;
+}
+
+.footer-links{
+
+  display:flex;
+  justify-content:center;
+
+  gap:20px;
+
+  flex-wrap:wrap;
+
+  margin-bottom:20px;
+}
+
+.footer-links a{
+
+  color:white;
+  text-decoration:none;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .topbar{
+    padding:18px 20px;
+  }
+
+  .hero-content h1{
+    font-size:42px;
+  }
+
+  .hero-content p{
+    font-size:16px;
+  }
+
+  .page-wrapper{
+    padding:50px 20px;
+  }
+
+  .section-title{
+    flex-direction:column;
+    gap:15px;
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header class="topbar">
+
+  <div class="logo">
+
+    Legal<span>Force</span>
+
+  </div>
+
+  <div class="nav-links">
+
+    <a href="../index.html">
+      Home
+    </a>
+
+    <a href="top-stories.html">
+      Top Stories
+    </a>
+
+    <a href="articles.html">
+      Articles
+    </a>
+
+    <a href="consultancy.html">
+      Consultancy
+    </a>
+
+    <a href="../index.html"
+       class="home-btn">
+
+       Back Home
+
+    </a>
+
+  </div>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <h1>
+
+      High Courts of India
+
+    </h1>
+
+    <p>
+
+      Latest High Court judgments, constitutional matters,
+      criminal Force decisions, civil disputes,
+      PIL hearings and judicial developments.
+
+    </p>
+
+  </div>
+
+</section>
+
+<!-- MAIN -->
+
+<section class="page-wrapper">
+
+  <div class="section-title">
+
+    <h2>
+
+      Latest High Court Updates
+
+    </h2>
+
+    <div class="Legal-badge">
+
+      Legal COURT NEWS
+
+    </div>
+
+  </div>
+
+  <div class="court-grid">
+
+    <!-- CARD 1 -->
+
+    <div class="court-card">
+
+      <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="court-content">
+
+        <span class="court-tag">
+          Delhi High Court
+        </span>
+
+        <h3>
+
+          Delhi HC rules bank accounts cannot be frozen arbitrarily
+
+        </h3>
+
+        <p>
+
+          Court emphasises financial liberty and
+          due process protections during investigations.
+
+        </p>
+
+        <div class="court-footer">
+
+          <span>Today</span>
+
+          <a href="article.html?id=3"
+             class="read-btn">
+
+             Read Judgment →
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- CARD 2 -->
+
+    <div class="court-card">
+
+      <img src="https://images.unsplash.com/photo-1528740561666-dc2479dc08ab?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="court-content">
+
+        <span class="court-tag">
+          Allahabad High Court
+        </span>
+
+        <h3>
+
+          Allahabad HC imposes heavy cost for false affidavit filing
+
+        </h3>
+
+        <p>
+
+          Court strongly criticises misuse of
+          judicial process and suppression of facts.
+
+        </p>
+
+        <div class="court-footer">
+
+          <span>4 Hours Ago</span>
+
+          <a href="article.html?id=2"
+             class="read-btn">
+
+             Read Judgment →
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- CARD 3 -->
+
+    <div class="court-card">
+
+      <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="court-content">
+
+        <span class="court-tag">
+          Bombay High Court
+        </span>
+
+        <h3>
+
+          Bombay HC orders faster disposal of pending commercial disputes
+
+        </h3>
+
+        <p>
+
+          Bench highlights economic importance
+          of speedy business litigation.
+
+        </p>
+
+        <div class="court-footer">
+
+          <span>Yesterday</span>
+
+          <a href="article.html?id=5"
+             class="read-btn">
+
+             Read Judgment →
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- CARD 4 -->
+
+    <div class="court-card">
+
+      <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="court-content">
+
+        <span class="court-tag">
+          Madras High Court
+        </span>
+
+        <h3>
+
+          Madras HC seeks AI regulation framework for legal technology
+
+        </h3>
+
+        <p>
+
+          Court discusses ethical and constitutional
+          concerns around artificial intelligence.
+
+        </p>
+
+        <div class="court-footer">
+
+          <span>Yesterday</span>
+
+          <a href="article.html?id=6"
+             class="read-btn">
+
+             Read Judgment →
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- CARD 5 -->
+
+    <div class="court-card">
+
+      <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="court-content">
+
+        <span class="court-tag">
+          Calcutta High Court
+        </span>
+
+        <h3>
+
+          Calcutta HC grants relief in constitutional free speech case
+
+        </h3>
+
+        <p>
+
+          Court reiterates democratic importance
+          of freedom of expression protections.
+
+        </p>
+
+        <div class="court-footer">
+
+          <span>2 Days Ago</span>
+
+          <a href="article.html?id=1"
+             class="read-btn">
+
+             Read Judgment →
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- CARD 6 -->
+
+    <div class="court-card">
+
+      <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="court-content">
+
+        <span class="court-tag">
+          Karnataka High Court
+        </span>
+
+        <h3>
+
+          Karnataka HC issues guidelines on cybercrime investigations
+
+        </h3>
+
+        <p>
+
+          New directions aim to improve
+          digital evidence handling and privacy safeguards.
+
+        </p>
+
+        <div class="court-footer">
+
+          <span>2 Days Ago</span>
+
+          <a href="article.html?id=3"
+             class="read-btn">
+
+             Read Judgment →
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- STATS -->
+
+  <div class="stats-section">
+
+    <div class="stat-box">
+
+      <i class="fa-solid fa-scale-balanced"></i>
+
+      <h3>
+
+        25+
+
+      </h3>
+
+      <p>
+
+        High Courts Covered
+
+      </p>
+
+    </div>
+
+    <div class="stat-box">
+
+      <i class="fa-solid fa-gavel"></i>
+
+      <h3>
+
+        500+
+
+      </h3>
+
+      <p>
+
+        Daily Judgments
+
+      </p>
+
+    </div>
+
+    <div class="stat-box">
+
+      <i class="fa-solid fa-book"></i>
+
+      <h3>
+
+        1000+
+
+      </h3>
+
+      <p>
+
+        Legal Articles
+
+      </p>
+
+    </div>
+
+    <div class="stat-box">
+
+      <i class="fa-solid fa-users"></i>
+
+      <h3>
+
+        50K+
+
+      </h3>
+
+      <p>
+
+        Legal Readers
+
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+  <div class="footer-links">
+
+    <a href="about.html">
+      About
+    </a>
+
+    <a href="contact.html">
+      Contact
+    </a>
+
+    <a href="privacy.html">
+      Privacy
+    </a>
+
+    <a href="terms.html">
+      Terms
+    </a>
+
+    <a href="careers.html">
+      Careers
+    </a>
+
+  </div>
+
+  <p>
+
+    © 2026 LegalForce Prototype
+
+  </p>
+
+</footer>
+
+</body>
+</html>

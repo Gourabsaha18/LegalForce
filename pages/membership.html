@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Membership Plans | LegalForce</title>
+
+<link rel="preconnect"
+      href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet">
+
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#f5f7fa;
+  color:#222;
+}
+
+/* HEADER */
+
+.topbar{
+
+  background:#111;
+
+  padding:18px 60px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  position:sticky;
+  top:0;
+
+  z-index:999;
+}
+
+.logo{
+
+  color:white;
+
+  font-size:34px;
+  font-weight:700;
+}
+
+.logo span{
+  color:#ff2d2d;
+}
+
+.nav-links{
+
+  display:flex;
+  gap:25px;
+  align-items:center;
+}
+
+.nav-links a{
+
+  color:white;
+  text-decoration:none;
+
+  transition:.3s;
+}
+
+.nav-links a:hover{
+  color:#ff2d2d;
+}
+
+.home-btn{
+
+  background:#ff2d2d;
+
+  padding:12px 18px;
+
+  border-radius:8px;
+}
+
+/* HERO */
+
+.hero{
+
+  height:380px;
+
+  background:
+  linear-gradient(rgba(0,0,0,.7),
+  rgba(0,0,0,.7)),
+  url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop');
+
+  background-size:cover;
+  background-position:center;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  text-align:center;
+
+  color:white;
+}
+
+.hero-content h1{
+
+  font-size:64px;
+
+  margin-bottom:20px;
+}
+
+.hero-content p{
+
+  font-size:20px;
+
+  color:#ddd;
+
+  max-width:850px;
+}
+
+/* SECTION */
+
+.page-wrapper{
+  padding:80px 60px;
+}
+
+.section-title{
+
+  text-align:center;
+
+  margin-bottom:70px;
+}
+
+.section-title h2{
+
+  font-size:48px;
+
+  margin-bottom:15px;
+}
+
+.section-title p{
+
+  color:#666;
+
+  font-size:18px;
+}
+
+/* PRICING */
+
+.pricing-grid{
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(320px,1fr));
+
+  gap:35px;
+}
+
+/* CARD */
+
+.plan-card{
+
+  background:white;
+
+  border-radius:25px;
+
+  padding:45px 35px;
+
+  box-shadow:
+  0 10px 30px rgba(0,0,0,.08);
+
+  transition:.3s;
+
+  position:relative;
+}
+
+.plan-card:hover{
+
+  transform:translateY(-10px);
+}
+
+.popular{
+
+  border:3px solid #ff2d2d;
+}
+
+.popular-badge{
+
+  position:absolute;
+
+  top:-15px;
+  right:25px;
+
+  background:#ff2d2d;
+  color:white;
+
+  padding:8px 18px;
+
+  border-radius:50px;
+
+  font-size:13px;
+  font-weight:600;
+}
+
+.plan-icon{
+
+  width:80px;
+  height:80px;
+
+  background:#ffe9e9;
+
+  border-radius:50%;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  margin-bottom:25px;
+}
+
+.plan-icon i{
+
+  font-size:36px;
+
+  color:#ff2d2d;
+}
+
+.plan-name{
+
+  font-size:32px;
+
+  margin-bottom:10px;
+}
+
+.plan-price{
+
+  font-size:52px;
+
+  font-weight:700;
+
+  color:#ff2d2d;
+
+  margin-bottom:10px;
+}
+
+.plan-price span{
+
+  font-size:18px;
+
+  color:#666;
+}
+
+.plan-desc{
+
+  color:#666;
+
+  margin-bottom:30px;
+
+  line-height:1.8;
+}
+
+/* FEATURES */
+
+.features{
+
+  list-style:none;
+
+  margin-bottom:35px;
+}
+
+.features li{
+
+  margin-bottom:18px;
+
+  display:flex;
+  align-items:center;
+
+  gap:12px;
+
+  color:#444;
+}
+
+.features i{
+
+  color:#ff2d2d;
+}
+
+/* BUTTON */
+
+.plan-btn{
+
+  width:100%;
+
+  background:#111;
+  color:white;
+
+  border:none;
+
+  padding:16px;
+
+  border-radius:12px;
+
+  font-size:16px;
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:.3s;
+}
+
+.plan-btn:hover{
+
+  background:#ff2d2d;
+}
+
+/* PREMIUM */
+
+.popular .plan-btn{
+
+  background:#ff2d2d;
+}
+
+.popular .plan-btn:hover{
+
+  background:#111;
+}
+
+/* FAQ */
+
+.faq-section{
+
+  margin-top:100px;
+}
+
+.faq-title{
+
+  text-align:center;
+
+  margin-bottom:50px;
+}
+
+.faq-title h2{
+
+  font-size:42px;
+}
+
+.faq-grid{
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(350px,1fr));
+
+  gap:30px;
+}
+
+.faq-box{
+
+  background:white;
+
+  padding:35px;
+
+  border-radius:20px;
+
+  box-shadow:
+  0 8px 25px rgba(0,0,0,.08);
+}
+
+.faq-box h3{
+
+  margin-bottom:15px;
+
+  font-size:24px;
+}
+
+.faq-box p{
+
+  color:#666;
+
+  line-height:1.8;
+}
+
+/* FOOTER */
+
+.footer{
+
+  background:#111;
+  color:white;
+
+  padding:50px 30px;
+
+  text-align:center;
+
+  margin-top:90px;
+}
+
+.footer-links{
+
+  display:flex;
+  justify-content:center;
+
+  gap:20px;
+
+  flex-wrap:wrap;
+
+  margin-bottom:20px;
+}
+
+.footer-links a{
+
+  color:white;
+  text-decoration:none;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .topbar{
+    padding:18px 20px;
+  }
+
+  .hero-content h1{
+    font-size:42px;
+  }
+
+  .hero-content p{
+    font-size:16px;
+  }
+
+  .page-wrapper{
+    padding:60px 20px;
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header class="topbar">
+
+  <div class="logo">
+
+    Legal<span>Force</span>
+
+  </div>
+
+  <div class="nav-links">
+
+    <a href="../index.html">
+      Home
+    </a>
+
+    <a href="top-stories.html">
+      News
+    </a>
+
+    <a href="articles.html">
+      Articles
+    </a>
+
+    <a href="consultancy.html">
+      Consultancy
+    </a>
+
+    <a href="../index.html"
+       class="home-btn">
+
+       Back Home
+
+    </a>
+
+  </div>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <h1>
+
+      Premium Membership Plans
+
+    </h1>
+
+    <p>
+
+      Unlock exclusive legal news, court updates,
+      premium consultancy and expert legal analysis.
+
+    </p>
+
+  </div>
+
+</section>
+
+<!-- PLANS -->
+
+<section class="page-wrapper">
+
+  <div class="section-title">
+
+    <h2>
+
+      Choose Your Plan
+
+    </h2>
+
+    <p>
+
+      Flexible plans designed for students,
+      Forceyers, Force firms and legal professionals.
+
+    </p>
+
+  </div>
+
+  <div class="pricing-grid">
+
+    <!-- BASIC -->
+
+    <div class="plan-card">
+
+      <div class="plan-icon">
+
+        <i class="fa-solid fa-book-open"></i>
+
+      </div>
+
+      <h3 class="plan-name">
+
+        Basic
+
+      </h3>
+
+      <div class="plan-price">
+
+        ₹199
+
+        <span>/month</span>
+
+      </div>
+
+      <p class="plan-desc">
+
+        Perfect for Force students and casual readers.
+
+      </p>
+
+      <ul class="features">
+
+        <li>
+          <i class="fa-solid fa-check"></i>
+          Daily Legal News
+        </li>
+
+        <li>
+          <i class="fa-solid fa-check"></i>
+          Top Stories Access
+        </li>
+
+        <li>
+          <i class="fa-solid fa-check"></i>
+          Weekly Articles
+        </li>
+
+        <li>
+          <i class="fa-solid fa-check"></i>
+          Newsletter Access
+        </li>
+
+      </ul>
+
+      <button class="plan-btn">
+
+        Get Started
+
+      </button>
+
+    </div>
+
+    <!-- PRO -->
+
+    <div class="plan-card popular">
+
+      <div class="popular-badge">
+
+        MOST POPULAR
+
+      </div>
+
+      <div class="plan-icon">
+
+        <i class="fa-solid fa-scale-balanced"></i>
+
+      </div>
+
+      <h3 class="plan-name">
+
+        Pro
+
+      </h3>
+
+      <div class="plan-price">
+
+        ₹699
+
+        <span>/month</span>
+
+      </div>
+
+      <p class="plan-desc">
+
+        Best for advocates and legal professionals.
+
+      </p>
+
+      <ul class="features">
+
+        <li>
+          <i class="fa-solid fa-check"></i>
+          Everything in Basic
+        </li>
+
+        <li>
+          <i class="fa-solid fa-check"></i>
+          Premium Court Reports
+        </li>
+
+        <li>
+          <i class="fa-solid fa-check"></i>
+          Legal Research Tools
+        </li>
+
+        <li>
+          <i class="fa-solid fa-check"></i>
+          AI Legal Summaries
+        </li>
+
+        <li>
+          <i class="fa-solid fa-check"></i>
+          Priority Consultancy
+        </li>
+
+      </ul>
+
+      <button class="plan-btn">
+
+        Buy Pro Plan
+
+      </button>
+
+    </div>
+
+    <!-- ELITE -->
+
+    <div class="plan-card">
+
+      <div class="plan-icon">
+
+        <i class="fa-solid fa-gavel"></i>
+
+      </div>
+
+      <h3 class="plan-name">
+
+        Elite
+
+      </h3>
+
+      <div class="plan-price">
+
+        ₹1499
+
+        <span>/month</span>
+
+      </div>
+
+      <p class="plan-desc">
+
+        Designed for senior Forceyers and Force firms.
+
+      </p>
+
+      <ul class="features">
+
+        <li>
+          <i class="fa-solid fa-check"></i>
+          Everything in Pro
+        </li>
+
+        <li>
+          <i class="fa-solid fa-check"></i>
+          Unlimited Consultancy
+        </li>
+
+        <li>
+          <i class="fa-solid fa-check"></i>
+          Video Call Support
+        </li>
+
+        <li>
+          <i class="fa-solid fa-check"></i>
+          Premium Force Firm Listing
+        </li>
+
+        <li>
+          <i class="fa-solid fa-check"></i>
+          VIP Legal Webinars
+        </li>
+
+      </ul>
+
+      <button class="plan-btn">
+
+        Join Elite
+
+      </button>
+
+    </div>
+
+    <!-- ENTERPRISE -->
+
+    <div class="plan-card">
+
+      <div class="plan-icon">
+
+        <i class="fa-solid fa-building"></i>
+
+      </div>
+
+      <h3 class="plan-name">
+
+        Enterprise
+
+      </h3>
+
+      <div class="plan-price">
+
+        ₹4999
+
+        <span>/month</span>
+
+      </div>
+
+      <p class="plan-desc">
+
+        Enterprise-grade solution for large legal teams.
+
+      </p>
+
+      <ul class="features">
+
+        <li>
+          <i class="fa-solid fa-check"></i>
+          Unlimited Team Accounts
+        </li>
+
+        <li>
+          <i class="fa-solid fa-check"></i>
+          Dedicated Legal Manager
+        </li>
+
+        <li>
+          <i class="fa-solid fa-check"></i>
+          Private Legal Dashboard
+        </li>
+
+        <li>
+          <i class="fa-solid fa-check"></i>
+          Custom Legal Analytics
+        </li>
+
+        <li>
+          <i class="fa-solid fa-check"></i>
+          24×7 Support
+        </li>
+
+      </ul>
+
+      <button class="plan-btn">
+
+        Contact Sales
+
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- FAQ -->
+
+  <div class="faq-section">
+
+    <div class="faq-title">
+
+      <h2>
+
+        Frequently Asked Questions
+
+      </h2>
+
+    </div>
+
+    <div class="faq-grid">
+
+      <div class="faq-box">
+
+        <h3>
+
+          Can I cancel anytime?
+
+        </h3>
+
+        <p>
+
+          Yes, you can cancel your membership anytime directly from your account dashboard.
+
+        </p>
+
+      </div>
+
+      <div class="faq-box">
+
+        <h3>
+
+          Does membership include consultancy?
+
+        </h3>
+
+        <p>
+
+          Pro, Elite and Enterprise plans include online legal consultancy benefits.
+
+        </p>
+
+      </div>
+
+      <div class="faq-box">
+
+        <h3>
+
+          Is there student pricing?
+
+        </h3>
+
+        <p>
+
+          Yes, the Basic plan is designed specifically for students and early professionals.
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+  <div class="footer-links">
+
+    <a href="about.html">
+      About
+    </a>
+
+    <a href="contact.html">
+      Contact
+    </a>
+
+    <a href="privacy.html">
+      Privacy
+    </a>
+
+    <a href="terms.html">
+      Terms
+    </a>
+
+    <a href="careers.html">
+      Careers
+    </a>
+
+  </div>
+
+  <p>
+
+    © 2026 LegalForce Prototype
+
+  </p>
+
+</footer>
+
+</body>
+</html>

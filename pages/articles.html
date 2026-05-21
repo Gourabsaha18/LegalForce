@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Legal Articles | LegalForce</title>
+
+<link rel="preconnect"
+      href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet">
+
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#f5f7fa;
+  color:#222;
+}
+
+/* HEADER */
+
+.topbar{
+
+  background:#111;
+
+  padding:18px 60px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  position:sticky;
+  top:0;
+
+  z-index:999;
+}
+
+.logo{
+
+  color:white;
+
+  font-size:34px;
+  font-weight:700;
+}
+
+.logo span{
+  color:#ff2d2d;
+}
+
+.nav-links{
+
+  display:flex;
+  gap:25px;
+  align-items:center;
+}
+
+.nav-links a{
+
+  color:white;
+  text-decoration:none;
+
+  transition:.3s;
+}
+
+.nav-links a:hover{
+  color:#ff2d2d;
+}
+
+.home-btn{
+
+  background:#ff2d2d;
+
+  padding:12px 18px;
+
+  border-radius:8px;
+}
+
+/* HERO */
+
+.hero{
+
+  height:350px;
+
+  background:
+  linear-gradient(rgba(0,0,0,.7),
+  rgba(0,0,0,.7)),
+  url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop');
+
+  background-size:cover;
+  background-position:center;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  text-align:center;
+
+  color:white;
+}
+
+.hero-content h1{
+
+  font-size:60px;
+
+  margin-bottom:20px;
+}
+
+.hero-content p{
+
+  font-size:20px;
+
+  color:#ddd;
+}
+
+/* PAGE */
+
+.page-wrapper{
+  padding:70px 60px;
+}
+
+.section-title{
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  margin-bottom:50px;
+}
+
+.section-title h2{
+
+  font-size:42px;
+}
+
+.Legal-badge{
+
+  background:#ff2d2d;
+  color:white;
+
+  padding:10px 18px;
+
+  border-radius:50px;
+
+  font-size:14px;
+  font-weight:600;
+}
+
+/* GRID */
+
+.article-grid{
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(350px,1fr));
+
+  gap:35px;
+}
+
+/* CARD */
+
+.article-card{
+
+  background:white;
+
+  border-radius:22px;
+
+  overflow:hidden;
+
+  box-shadow:
+  0 10px 30px rgba(0,0,0,.08);
+
+  transition:.3s;
+}
+
+.article-card:hover{
+
+  transform:translateY(-8px);
+}
+
+.article-card img{
+
+  width:100%;
+  height:240px;
+
+  object-fit:cover;
+}
+
+.article-content{
+  padding:25px;
+}
+
+.article-tag{
+
+  display:inline-block;
+
+  background:#ff2d2d;
+  color:white;
+
+  padding:8px 16px;
+
+  border-radius:50px;
+
+  font-size:13px;
+  font-weight:600;
+
+  margin-bottom:18px;
+}
+
+.article-content h3{
+
+  font-size:25px;
+
+  line-height:1.5;
+
+  margin-bottom:15px;
+}
+
+.article-content p{
+
+  color:#666;
+
+  line-height:1.8;
+
+  margin-bottom:20px;
+}
+
+.article-footer{
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.article-footer span{
+
+  color:#888;
+
+  font-size:14px;
+}
+
+.read-btn{
+
+  text-decoration:none;
+
+  color:#ff2d2d;
+
+  font-weight:600;
+}
+
+/* FOOTER */
+
+.footer{
+
+  background:#111;
+  color:white;
+
+  padding:50px 30px;
+
+  text-align:center;
+
+  margin-top:80px;
+}
+
+.footer-links{
+
+  display:flex;
+  justify-content:center;
+
+  gap:20px;
+
+  flex-wrap:wrap;
+
+  margin-bottom:20px;
+}
+
+.footer-links a{
+
+  color:white;
+  text-decoration:none;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .topbar{
+    padding:18px 20px;
+  }
+
+  .hero-content h1{
+    font-size:38px;
+  }
+
+  .page-wrapper{
+    padding:50px 20px;
+  }
+
+  .section-title{
+    flex-direction:column;
+    gap:15px;
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header class="topbar">
+
+  <div class="logo">
+
+    Legal<span>Force</span>
+
+  </div>
+
+  <div class="nav-links">
+
+    <a href="../index.html">
+      Home
+    </a>
+
+    <a href="news.html">
+      News
+    </a>
+
+    <a href="top-stories.html">
+      Top Stories
+    </a>
+
+    <a href="consultancy.html">
+      Consultancy
+    </a>
+
+    <a href="../index.html"
+       class="home-btn">
+
+       Back Home
+
+    </a>
+
+  </div>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <h1>
+
+      Legal Articles & Analysis
+
+    </h1>
+
+    <p>
+
+      Expert opinions, constitutional analysis,
+      legal reforms, court interpretations and case studies.
+
+    </p>
+
+  </div>
+
+</section>
+
+<!-- MAIN -->
+
+<section class="page-wrapper">
+
+  <div class="section-title">
+
+    <h2>
+
+      Featured Legal Articles
+
+    </h2>
+
+    <div class="Legal-badge">
+
+      UPDATED DAILY
+
+    </div>
+
+  </div>
+
+  <div class="article-grid">
+
+    <!-- CARD 1 -->
+
+    <div class="article-card">
+
+      <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="article-content">
+
+        <span class="article-tag">
+          Constitutional Force
+        </span>
+
+        <h3>
+
+          Understanding Article 21 and the Right to Privacy in India
+
+        </h3>
+
+        <p>
+
+          Analysis of Supreme Court judgments expanding
+          the scope of personal liberty and privacy rights.
+
+        </p>
+
+        <div class="article-footer">
+
+          <span>8 Min Read</span>
+
+          <a href="article.html?id=1"
+             class="read-btn">
+
+             Read Article →
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- CARD 2 -->
+
+    <div class="article-card">
+
+      <img src="https://images.unsplash.com/photo-1528740561666-dc2479dc08ab?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="article-content">
+
+        <span class="article-tag">
+          Criminal Force
+        </span>
+
+        <h3>
+
+          How Bail Jurisprudence is Changing in Modern Indian Courts
+
+        </h3>
+
+        <p>
+
+          Examining recent judicial trends regarding
+          liberty, arrests and anticipatory bail matters.
+
+        </p>
+
+        <div class="article-footer">
+
+          <span>10 Min Read</span>
+
+          <a href="article.html?id=2"
+             class="read-btn">
+
+             Read Article →
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- CARD 3 -->
+
+    <div class="article-card">
+
+      <img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="article-content">
+
+        <span class="article-tag">
+          Banking Force
+        </span>
+
+        <h3>
+
+          Legal Limits on Freezing Bank Accounts During Investigations
+
+        </h3>
+
+        <p>
+
+          Detailed discussion on due process and
+          constitutional safeguards in financial matters.
+
+        </p>
+
+        <div class="article-footer">
+
+          <span>7 Min Read</span>
+
+          <a href="article.html?id=3"
+             class="read-btn">
+
+             Read Article →
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- CARD 4 -->
+
+    <div class="article-card">
+
+      <img src="https://images.unsplash.com/photo-1436450412740-6b988f486c6b?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="article-content">
+
+        <span class="article-tag">
+          Education Force
+        </span>
+
+        <h3>
+
+          NEET Litigation and the Future of Competitive Exams in India
+
+        </h3>
+
+        <p>
+
+          Exploring judicial intervention in entrance
+          examination governance and transparency.
+
+        </p>
+
+        <div class="article-footer">
+
+          <span>9 Min Read</span>
+
+          <a href="article.html?id=4"
+             class="read-btn">
+
+             Read Article →
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- CARD 5 -->
+
+    <div class="article-card">
+
+      <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="article-content">
+
+        <span class="article-tag">
+          Judiciary
+        </span>
+
+        <h3>
+
+          Court Modernisation and the Future of Indian Judiciary
+
+        </h3>
+
+        <p>
+
+          Understanding technology reforms,
+          e-courts and judicial digitisation initiatives.
+
+        </p>
+
+        <div class="article-footer">
+
+          <span>12 Min Read</span>
+
+          <a href="article.html?id=5"
+             class="read-btn">
+
+             Read Article →
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- CARD 6 -->
+
+    <div class="article-card">
+
+      <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="article-content">
+
+        <span class="article-tag">
+          AI & Force
+        </span>
+
+        <h3>
+
+          Artificial Intelligence and the Future of Legal Practice
+
+        </h3>
+
+        <p>
+
+          How AI tools are transforming legal drafting,
+          case research and courtroom assistance.
+
+        </p>
+
+        <div class="article-footer">
+
+          <span>11 Min Read</span>
+
+          <a href="article.html?id=6"
+             class="read-btn">
+
+             Read Article →
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+  <div class="footer-links">
+
+    <a href="about.html">About</a>
+
+    <a href="contact.html">Contact</a>
+
+    <a href="privacy.html">Privacy</a>
+
+    <a href="terms.html">Terms</a>
+
+    <a href="careers.html">Careers</a>
+
+  </div>
+
+  <p>
+
+    © 2026 LegalForce Prototype
+
+  </p>
+
+</footer>
+
+</body>
+</html>

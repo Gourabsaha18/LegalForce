@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>User Profile | LegalForce</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f4f7fb;
+color:#222;
+}
+
+/* HEADER */
+
+header{
+
+background:#111;
+
+padding:18px 60px;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+position:sticky;
+top:0;
+z-index:999;
+}
+
+.logo{
+font-size:34px;
+font-weight:700;
+color:#fff;
+}
+
+.logo span{
+color:#ff2d2d;
+}
+
+nav{
+display:flex;
+gap:25px;
+align-items:center;
+}
+
+nav a{
+
+text-decoration:none;
+color:#fff;
+
+transition:.3s;
+}
+
+nav a:hover{
+color:#ff2d2d;
+}
+
+.logout-btn{
+
+background:#ff2d2d;
+
+padding:12px 18px;
+
+border-radius:8px;
+}
+
+/* PROFILE PAGE */
+
+.profile-container{
+
+padding:60px;
+
+display:grid;
+
+grid-template-columns:
+320px 1fr;
+
+gap:35px;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+
+background:#fff;
+
+border-radius:25px;
+
+padding:35px;
+
+height:fit-content;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.08);
+}
+
+.profile-img{
+
+width:130px;
+height:130px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+display:block;
+
+margin:auto;
+
+margin-bottom:20px;
+
+border:5px solid #ff2d2d;
+}
+
+.sidebar h2{
+
+text-align:center;
+
+margin-bottom:8px;
+}
+
+.user-type{
+
+text-align:center;
+
+color:#666;
+
+margin-bottom:25px;
+}
+
+.menu{
+
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.menu a{
+
+text-decoration:none;
+
+padding:14px 18px;
+
+background:#f7f9fc;
+
+border-radius:12px;
+
+color:#222;
+
+font-weight:500;
+
+transition:.3s;
+}
+
+.menu a:hover{
+background:#ff2d2d;
+color:#fff;
+}
+
+/* CONTENT */
+
+.content{
+
+display:flex;
+flex-direction:column;
+gap:35px;
+}
+
+/* CARDS */
+
+.card{
+
+background:#fff;
+
+padding:35px;
+
+border-radius:25px;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.08);
+}
+
+.card h3{
+
+font-size:30px;
+
+margin-bottom:25px;
+}
+
+/* INFO */
+
+.info-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(250px,1fr));
+
+gap:20px;
+}
+
+.info-box{
+
+background:#f7f9fc;
+
+padding:22px;
+
+border-radius:18px;
+}
+
+.info-box h4{
+
+font-size:15px;
+
+color:#666;
+
+margin-bottom:10px;
+}
+
+.info-box p{
+
+font-size:18px;
+
+font-weight:600;
+}
+
+/* CONSULTATIONS */
+
+.consultation{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:18px 0;
+
+border-bottom:1px solid #eee;
+}
+
+.consultation:last-child{
+border:none;
+}
+
+.consultation h4{
+margin-bottom:5px;
+}
+
+.consultation p{
+color:#666;
+}
+
+.status{
+
+padding:10px 16px;
+
+border-radius:10px;
+
+font-size:14px;
+font-weight:600;
+}
+
+.completed{
+background:#dff7e3;
+color:green;
+}
+
+.upcoming{
+background:#fff3d8;
+color:#d48a00;
+}
+
+/* MEMBERSHIP */
+
+.membership-box{
+
+background:
+linear-gradient(135deg,#111,#222);
+
+color:#fff;
+
+padding:35px;
+
+border-radius:25px;
+}
+
+.membership-box h2{
+
+font-size:38px;
+
+margin-bottom:15px;
+}
+
+.membership-box p{
+
+color:#ddd;
+
+line-height:1.8;
+
+margin-bottom:25px;
+}
+
+.membership-btn{
+
+background:#ff2d2d;
+color:#fff;
+
+border:none;
+
+padding:15px 25px;
+
+border-radius:12px;
+
+font-size:16px;
+font-weight:600;
+
+cursor:pointer;
+}
+
+/* MOBILE */
+
+@media(max-width:1000px){
+
+.profile-container{
+grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:768px){
+
+header{
+padding:18px 20px;
+}
+
+.profile-container{
+padding:30px 20px;
+}
+
+.card{
+padding:25px 20px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="logo">
+
+Legal<span>Force</span>
+
+</div>
+
+<nav>
+
+<a href="../index.html">Home</a>
+
+<a href="consultancy.html">Consultancy</a>
+
+<a href="articles.html">Articles</a>
+
+<a href="top-stories.html">News</a>
+
+<a href="#"
+class="logout-btn"
+onclick="logout()">
+
+Logout
+
+</a>
+
+</nav>
+
+</header>
+
+<!-- PROFILE -->
+
+<section class="profile-container">
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+<img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop"
+class="profile-img">
+
+<h2 id="userName">
+
+Gourab Saha
+
+</h2>
+
+<p class="user-type">
+
+Premium Member
+
+</p>
+
+<div class="menu">
+
+<a href="#">
+
+<i class="fa-solid fa-user"></i>
+
+ My Profile
+
+</a>
+
+<a href="booking-consultancy.html">
+
+<i class="fa-solid fa-calendar-check"></i>
+
+ My Bookings
+
+</a>
+
+<a href="membership.html">
+
+<i class="fa-solid fa-crown"></i>
+
+ Membership
+
+</a>
+
+<a href="#">
+
+<i class="fa-solid fa-wallet"></i>
+
+ Payments
+
+</a>
+
+<a href="#">
+
+<i class="fa-solid fa-gear"></i>
+
+ Settings
+
+</a>
+
+</div>
+
+</div>
+
+<!-- MAIN CONTENT -->
+
+<div class="content">
+
+<!-- USER INFO -->
+
+<div class="card">
+
+<h3>
+
+Personal Information
+
+</h3>
+
+<div class="info-grid">
+
+<div class="info-box">
+
+<h4>
+
+Full Name
+
+</h4>
+
+<p id="profileName">
+
+Gourab Saha
+
+</p>
+
+</div>
+
+<div class="info-box">
+
+<h4>
+
+Email Address
+
+</h4>
+
+<p>
+
+gourab@email.com
+
+</p>
+
+</div>
+
+<div class="info-box">
+
+<h4>
+
+Phone Number
+
+</h4>
+
+<p>
+
++91 9876543210
+
+</p>
+
+</div>
+
+<div class="info-box">
+
+<h4>
+
+Member Since
+
+</h4>
+
+<p>
+
+January 2026
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- CONSULTATIONS -->
+
+<div class="card">
+
+<h3>
+
+Recent Consultations
+
+</h3>
+
+<div class="consultation">
+
+<div>
+
+<h4>
+
+Adv. Rahul Sharma
+
+</h4>
+
+<p>
+
+Criminal Force • Video Consultation
+
+</p>
+
+</div>
+
+<div class="status completed">
+
+Completed
+
+</div>
+
+</div>
+
+<div class="consultation">
+
+<div>
+
+<h4>
+
+Adv. Priya Sen
+
+</h4>
+
+<p>
+
+Corporate Force • Chat Consultation
+
+</p>
+
+</div>
+
+<div class="status upcoming">
+
+Upcoming
+
+</div>
+
+</div>
+
+<div class="consultation">
+
+<div>
+
+<h4>
+
+Adv. Neha Kapoor
+
+</h4>
+
+<p>
+
+Cyber Force • Voice Call
+
+</p>
+
+</div>
+
+<div class="status completed">
+
+Completed
+
+</div>
+
+</div>
+
+</div>
+
+<!-- MEMBERSHIP -->
+
+<div class="membership-box">
+
+<h2>
+
+Premium Membership
+
+</h2>
+
+<p>
+
+Get priority advocate booking,
+discounted consultation fees,
+exclusive legal articles and premium legal support.
+
+</p>
+
+<button class="membership-btn">
+
+Upgrade Membership
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<script>
+
+/* LOAD USER NAME */
+
+let username =
+localStorage.getItem('username');
+
+if(username){
+
+document.getElementById('userName')
+.innerText = username;
+
+document.getElementById('profileName')
+.innerText = username;
+
+}
+
+/* LOGOUT */
+
+function logout(){
+
+localStorage.removeItem('isLoggedIn');
+
+window.location.href='login.html';
+
+}
+
+</script>
+
+</body>
+</html>

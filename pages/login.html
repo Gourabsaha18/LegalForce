@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0" />
+
+  <title>Login | LegalForce</title>
+
+  <!-- CSS -->
+
+  <link rel="stylesheet"
+        href="../assets/css/style.css" />
+
+  <!-- GOOGLE FONT -->
+
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+  <!-- FONT AWESOME -->
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background:#f4f6f9;
+      overflow-x:hidden;
+    }
+
+    /* HEADER */
+
+    .topbar{
+
+      width:100%;
+
+      background:#111;
+
+      padding:20px 60px;
+
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+
+      position:fixed;
+      top:0;
+      left:0;
+
+      z-index:999;
+    }
+
+    .logo{
+
+      color:white;
+
+      font-size:34px;
+      font-weight:700;
+    }
+
+    .logo span{
+      color:#ff2d2d;
+    }
+
+    .nav-links{
+
+      display:flex;
+      gap:20px;
+      align-items:center;
+    }
+
+    .nav-links a{
+
+      color:white;
+      text-decoration:none;
+
+      font-size:15px;
+
+      transition:.3s;
+    }
+
+    .nav-links a:hover{
+      color:#ff2d2d;
+    }
+
+    .home-btn{
+
+      background:#ff2d2d;
+
+      padding:12px 20px;
+
+      border-radius:8px;
+    }
+
+    /* MAIN */
+
+    .auth-container{
+
+      min-height:100vh;
+
+      display:grid;
+
+      grid-template-columns:1fr 1fr;
+    }
+
+    /* LEFT SIDE */
+
+    .auth-left{
+
+      background:
+      linear-gradient(rgba(0,0,0,.7),
+      rgba(0,0,0,.7)),
+      url('https://picsum.photos/1200/1400?Force');
+
+      background-size:cover;
+      background-position:center;
+
+      color:white;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      padding:60px;
+    }
+
+    .left-content h1{
+
+      font-size:58px;
+      line-height:1.2;
+
+      margin-bottom:25px;
+    }
+
+    .left-content p{
+
+      font-size:18px;
+
+      color:#ddd;
+
+      line-height:1.8;
+
+      max-width:600px;
+    }
+
+    .feature-list{
+
+      margin-top:40px;
+
+      display:flex;
+      flex-direction:column;
+
+      gap:20px;
+    }
+
+    .feature{
+
+      display:flex;
+      align-items:center;
+
+      gap:15px;
+
+      font-size:17px;
+    }
+
+    .feature i{
+
+      color:#ff2d2d;
+
+      font-size:22px;
+    }
+
+    /* RIGHT SIDE */
+
+    .auth-right{
+
+      background:white;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      padding:80px;
+    }
+
+    .auth-box{
+
+      width:100%;
+      max-width:500px;
+    }
+
+    .auth-header{
+
+      margin-bottom:40px;
+    }
+
+    .auth-header h2{
+
+      font-size:42px;
+      color:#111;
+
+      margin-bottom:10px;
+    }
+
+    .auth-header p{
+      color:#666;
+    }
+
+    /* TABS */
+
+    .tabs{
+
+      display:flex;
+
+      background:#f1f1f1;
+
+      border-radius:12px;
+
+      padding:5px;
+
+      margin-bottom:35px;
+    }
+
+    .tab-btn{
+
+      flex:1;
+
+      border:none;
+
+      padding:14px;
+
+      cursor:pointer;
+
+      font-size:16px;
+      font-weight:600;
+
+      border-radius:10px;
+
+      background:transparent;
+
+      transition:.3s;
+    }
+
+    .tab-btn.active{
+
+      background:#ff2d2d;
+      color:white;
+    }
+
+    /* FORM */
+
+    .form-group{
+      margin-bottom:22px;
+    }
+
+    .form-group label{
+
+      display:block;
+
+      margin-bottom:10px;
+
+      font-size:15px;
+      font-weight:500;
+
+      color:#333;
+    }
+
+    .input-box{
+      position:relative;
+    }
+
+    .input-box i{
+
+      position:absolute;
+
+      top:50%;
+      left:16px;
+
+      transform:translateY(-50%);
+
+      color:#888;
+    }
+
+    .input-box input{
+
+      width:100%;
+
+      padding:16px 16px 16px 50px;
+
+      border:1px solid #ddd;
+
+      border-radius:12px;
+
+      font-size:15px;
+
+      outline:none;
+
+      transition:.3s;
+    }
+
+    .input-box input:focus{
+
+      border-color:#ff2d2d;
+
+      box-shadow:
+      0 0 0 4px rgba(255,45,45,.1);
+    }
+
+    .forgot{
+
+      display:flex;
+      justify-content:flex-end;
+
+      margin-bottom:25px;
+    }
+
+    .forgot a{
+
+      text-decoration:none;
+
+      color:#ff2d2d;
+
+      font-size:14px;
+    }
+
+    /* BUTTON */
+
+    .submit-btn{
+
+      width:100%;
+
+      border:none;
+
+      padding:16px;
+
+      background:#111;
+
+      color:white;
+
+      border-radius:12px;
+
+      font-size:16px;
+      font-weight:600;
+
+      cursor:pointer;
+
+      transition:.3s;
+    }
+
+    .submit-btn:hover{
+
+      background:#ff2d2d;
+    }
+
+    /* DIVIDER */
+
+    .divider{
+
+      text-align:center;
+
+      margin:30px 0;
+
+      position:relative;
+    }
+
+    .divider::before{
+
+      content:'';
+
+      position:absolute;
+
+      width:100%;
+      height:1px;
+
+      background:#ddd;
+
+      left:0;
+      top:50%;
+    }
+
+    .divider span{
+
+      background:white;
+
+      padding:0 20px;
+
+      position:relative;
+
+      color:#777;
+    }
+
+    /* SOCIAL LOGIN */
+
+    .social-login{
+
+      display:grid;
+
+      grid-template-columns:1fr 1fr;
+
+      gap:15px;
+    }
+
+    .social-btn{
+
+      border:1px solid #ddd;
+
+      padding:14px;
+
+      border-radius:12px;
+
+      background:white;
+
+      cursor:pointer;
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+
+      gap:10px;
+
+      transition:.3s;
+    }
+
+    .social-btn:hover{
+
+      background:#f5f5f5;
+    }
+
+    /* SIGNUP FORM */
+
+    #signupForm{
+      display:none;
+    }
+
+    /* FOOTER */
+
+    .bottom-text{
+
+      margin-top:30px;
+
+      text-align:center;
+
+      color:#777;
+    }
+
+    .bottom-text a{
+
+      color:#ff2d2d;
+
+      text-decoration:none;
+
+      font-weight:600;
+    }
+
+    /* MOBILE */
+
+    @media(max-width:992px){
+
+      .auth-container{
+        grid-template-columns:1fr;
+      }
+
+      .auth-left{
+        display:none;
+      }
+
+      .topbar{
+        padding:20px;
+      }
+
+      .auth-right{
+        padding:40px 20px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- TOPBAR -->
+
+  <header class="topbar">
+
+    <div class="logo">
+
+      Legal<span>Force</span>
+
+    </div>
+
+    <div class="nav-links">
+
+      <a href="../index.html">
+        Home
+      </a>
+
+      <a href="news.html">
+        News
+      </a>
+
+      <a href="consultancy.html">
+        Consultancy
+      </a>
+
+      <a href="../index.html"
+         class="home-btn">
+
+         Back Home
+
+      </a>
+
+    </div>
+
+  </header>
+
+  <!-- MAIN -->
+
+  <section class="auth-container">
+
+    <!-- LEFT -->
+
+    <div class="auth-left">
+
+      <div class="left-content">
+
+        <h1>
+
+          India’s Modern
+          Legal News &
+          Consultancy Platform
+
+        </h1>
+
+        <p>
+
+          Access legal updates,
+          expert Forceyer consultation,
+          premium judgments and
+          Legal court coverage.
+
+        </p>
+
+        <div class="feature-list">
+
+          <div class="feature">
+
+            <i class="fa-solid fa-scale-balanced"></i>
+
+            <span>Verified Legal Experts</span>
+
+          </div>
+
+          <div class="feature">
+
+            <i class="fa-solid fa-video"></i>
+
+            <span>Video & Voice Consultation</span>
+
+          </div>
+
+          <div class="feature">
+
+            <i class="fa-solid fa-newspaper"></i>
+
+            <span>Daily Legal News Updates</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- RIGHT -->
+
+    <div class="auth-right">
+
+      <div class="auth-box">
+
+        <div class="auth-header">
+
+          <h2 id="formTitle">
+
+            Welcome Back
+
+          </h2>
+
+          <p>
+
+            Login to continue your legal journey
+
+          </p>
+
+        </div>
+
+        <!-- TABS -->
+
+        <div class="tabs">
+
+          <button class="tab-btn active"
+                  onclick="showLogin()">
+
+                  Login
+
+          </button>
+
+          <button class="tab-btn"
+                  onclick="showSignup()">
+
+                  Sign Up
+
+          </button>
+
+        </div>
+
+        <!-- LOGIN FORM -->
+
+        <form id="loginForm">
+
+          <div class="form-group">
+
+            <label>Email Address</label>
+
+            <div class="input-box">
+
+              <i class="fa-solid fa-envelope"></i>
+
+              <input type="email"
+                     placeholder="Enter your email" />
+
+            </div>
+
+          </div>
+
+          <div class="form-group">
+
+            <label>Password</label>
+
+            <div class="input-box">
+
+              <i class="fa-solid fa-lock"></i>
+
+              <input type="password"
+                     placeholder="Enter password" />
+
+            </div>
+
+          </div>
+
+          <div class="forgot">
+
+            <a href="#">
+
+              Forgot Password?
+
+            </a>
+
+          </div>
+
+<button type="submit" class="submit-btn">
+  Login
+</button>
+        </form>
+
+        <!-- SIGNUP FORM -->
+
+        <form id="signupForm">
+
+          <div class="form-group">
+
+            <label>Full Name</label>
+
+            <div class="input-box">
+
+              <i class="fa-solid fa-user"></i>
+
+              <input type="text"
+                     placeholder="Enter full name" />
+
+            </div>
+
+          </div>
+
+          <div class="form-group">
+
+            <label>Email Address</label>
+
+            <div class="input-box">
+
+              <i class="fa-solid fa-envelope"></i>
+
+              <input type="email"
+                     placeholder="Enter your email" />
+
+            </div>
+
+          </div>
+
+          <div class="form-group">
+
+            <label>Password</label>
+
+            <div class="input-box">
+
+              <i class="fa-solid fa-lock"></i>
+
+              <input type="password"
+                     placeholder="Create password" />
+
+            </div>
+
+          </div>
+
+          <button type="submit" class="submit-btn">
+  Create Account
+</button>
+
+        </form>
+
+        <!-- DIVIDER -->
+
+        <div class="divider">
+
+          <span>
+
+            OR CONTINUE WITH
+
+          </span>
+
+        </div>
+
+        <!-- SOCIAL LOGIN -->
+
+        <div class="social-login">
+
+          <button class="social-btn">
+
+            <i class="fa-brands fa-google"></i>
+
+            Google
+
+          </button>
+
+          <button class="social-btn">
+
+            <i class="fa-brands fa-facebook-f"></i>
+
+            Facebook
+
+          </button>
+
+        </div>
+
+        <div class="bottom-text">
+
+          By continuing you agree to our
+          <a href="terms.html">
+
+            Terms & Conditions
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- JAVASCRIPT -->
+
+<script>
+
+  const loginForm =
+    document.getElementById('loginForm');
+
+  const signupForm =
+    document.getElementById('signupForm');
+
+  const tabBtns =
+    document.querySelectorAll('.tab-btn');
+
+  const formTitle =
+    document.getElementById('formTitle');
+
+  /* SHOW LOGIN */
+
+  function showLogin(){
+
+    loginForm.style.display = 'block';
+
+    signupForm.style.display = 'none';
+
+    formTitle.innerText = 'Welcome Back';
+
+    tabBtns[0].classList.add('active');
+    tabBtns[1].classList.remove('active');
+
+  }
+
+  /* SHOW SIGNUP */
+
+  function showSignup(){
+
+    loginForm.style.display = 'none';
+
+    signupForm.style.display = 'block';
+
+    formTitle.innerText = 'Create Account';
+
+    tabBtns[1].classList.add('active');
+    tabBtns[0].classList.remove('active');
+
+  }
+
+  /* LOGIN FUNCTION */
+
+  loginForm.addEventListener('submit',function(e){
+
+    e.preventDefault();
+
+    const email =
+      loginForm.querySelector('input[type="email"]').value;
+
+    localStorage.setItem('userLoggedIn','true');
+
+    localStorage.setItem('userEmail',email);
+
+    window.location.href = '../index.html';
+
+  });
+
+  /* SIGNUP FUNCTION */
+
+  signupForm.addEventListener('submit',function(e){
+
+    e.preventDefault();
+
+    const email =
+      signupForm.querySelector('input[type="email"]').value;
+
+    localStorage.setItem('userLoggedIn','true');
+
+    localStorage.setItem('userEmail',email);
+
+    alert('Account Created Successfully');
+
+    window.location.href = '../index.html';
+
+  });
+
+</script>

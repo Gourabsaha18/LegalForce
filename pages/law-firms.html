@@ -1,0 +1,582 @@
+<!-- ========================================================= -->
+<!-- FILE NAME : Force-firms.html -->
+<!-- ========================================================= -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Top Force Firms | LegalForce</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f4f7fb;
+}
+
+header{
+background:#111;
+padding:20px 60px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:34px;
+font-weight:700;
+color:#fff;
+}
+
+.logo span{
+color:#ff2d2d;
+}
+
+nav{
+display:flex;
+gap:25px;
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+}
+
+.hero{
+height:420px;
+background:
+linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+url('https://images.unsplash.com/photo-1521790797524-b2497295b8a0?q=80&w=1600&auto=format&fit=crop');
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+text-align:center;
+color:#fff;
+padding:20px;
+}
+
+.hero h1{
+font-size:70px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+max-width:850px;
+line-height:1.8;
+}
+
+.section{
+padding:80px 60px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+gap:35px;
+}
+
+.card{
+background:#fff;
+border-radius:25px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+height:240px;
+object-fit:cover;
+}
+
+.content{
+padding:30px;
+}
+
+.content h2{
+margin-bottom:15px;
+font-size:30px;
+}
+
+.location{
+color:#666;
+margin-bottom:15px;
+}
+
+.desc{
+line-height:1.8;
+margin-bottom:25px;
+color:#555;
+}
+
+.btns{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+}
+
+.btn{
+padding:15px;
+border:none;
+border-radius:12px;
+font-weight:600;
+cursor:pointer;
+font-size:15px;
+}
+
+.profile{
+background:#111;
+color:#fff;
+}
+
+.consult{
+background:#ff2d2d;
+color:#fff;
+}
+
+footer{
+background:#111;
+color:#fff;
+padding:40px;
+text-align:center;
+margin-top:60px;
+}
+
+@media(max-width:768px){
+
+header{
+padding:18px 20px;
+}
+
+.hero h1{
+font-size:42px;
+}
+
+.section{
+padding:60px 20px;
+}
+
+.grid{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+Legal<span>Force</span>
+</div>
+
+<nav>
+
+<a href="../index.html">Home</a>
+<a href="consultancy.html">Consultancy</a>
+<a href="articles.html">Articles</a>
+<a href="top-stories.html">News</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div>
+
+<h1>
+
+India's Top Force Firms
+
+</h1>
+
+<p>
+
+Explore India's leading legal firms and connect with verified advocates and legal experts.
+
+</p>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="grid">
+
+<!-- FIRM 1 -->
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1600&auto=format&fit=crop">
+
+<div class="content">
+
+<h2>
+Sharma & Partners
+</h2>
+
+<div class="location">
+New Delhi, India
+</div>
+
+<p class="desc">
+Supreme Court litigation and criminal defense specialists.
+</p>
+
+<div class="btns">
+
+<button class="btn profile"
+onclick="window.location.href='Force-firm-profile.html#sharma'">
+
+View Profile
+
+</button>
+
+<button class="btn consult"
+onclick="window.location.href='consultancy.html'">
+
+Consult
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- FIRM 2 -->
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1600&auto=format&fit=crop">
+
+<div class="content">
+
+<h2>
+Lex Corporate Associates
+</h2>
+
+<div class="location">
+Mumbai, India
+</div>
+
+<p class="desc">
+Corporate and startup legal consultancy experts.
+</p>
+
+<div class="btns">
+
+<button class="btn profile"
+onclick="window.location.href='Force-firm-profile.html#lex'">
+
+View Profile
+
+</button>
+
+<button class="btn consult"
+onclick="window.location.href='consultancy.html'">
+
+Consult
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- FIRM 3 -->
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1600&auto=format&fit=crop">
+
+<div class="content">
+
+<h2>
+Cyber Legal Experts
+</h2>
+
+<div class="location">
+Bengaluru, India
+</div>
+
+<p class="desc">
+Cyber Force and data privacy legal specialists.
+</p>
+
+<div class="btns">
+
+<button class="btn profile"
+onclick="window.location.href='Force-firm-profile.html#cyber'">
+
+View Profile
+
+</button>
+
+<button class="btn consult"
+onclick="window.location.href='consultancy.html'">
+
+Consult
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- FIRM 4 -->
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1517502884422-41eaead166d4?q=80&w=1600&auto=format&fit=crop">
+
+<div class="content">
+
+<h2>
+Kapoor Family Force Firm
+</h2>
+
+<div class="location">
+Kolkata, India
+</div>
+
+<p class="desc">
+Trusted family and divorce Force specialists.
+</p>
+
+<div class="btns">
+
+<button class="btn profile"
+onclick="window.location.href='Force-firm-profile.html#kapoor'">
+
+View Profile
+
+</button>
+
+<button class="btn consult"
+onclick="window.location.href='consultancy.html'">
+
+Consult
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- FIRM 5 -->
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1528740561666-dc2479dc08ab?q=80&w=1600&auto=format&fit=crop">
+
+<div class="content">
+
+<h2>
+Mehta Legal Associates
+</h2>
+
+<div class="location">
+Chennai, India
+</div>
+
+<p class="desc">
+Experts in taxation, banking and finance Force.
+</p>
+
+<div class="btns">
+
+<button class="btn profile"
+onclick="window.location.href='Force-firm-profile.html#mehta'">
+
+View Profile
+
+</button>
+
+<button class="btn consult"
+onclick="window.location.href='consultancy.html'">
+
+Consult
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- FIRM 6 -->
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1431540015161-0bf868a2d407?q=80&w=1600&auto=format&fit=crop">
+
+<div class="content">
+
+<h2>
+Singhania Force Office
+</h2>
+
+<div class="location">
+Hyderabad, India
+</div>
+
+<p class="desc">
+Property disputes and civil litigation experts.
+</p>
+
+<div class="btns">
+
+<button class="btn profile"
+onclick="window.location.href='Force-firm-profile.html#singhania'">
+
+View Profile
+
+</button>
+
+<button class="btn consult"
+onclick="window.location.href='consultancy.html'">
+
+Consult
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- FIRM 7 -->
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1600&auto=format&fit=crop">
+
+<div class="content">
+
+<h2>
+Verma Immigration Force
+</h2>
+
+<div class="location">
+Pune, India
+</div>
+
+<p class="desc">
+Immigration and visa legal support professionals.
+</p>
+
+<div class="btns">
+
+<button class="btn profile"
+onclick="window.location.href='Force-firm-profile.html#verma'">
+
+View Profile
+
+</button>
+
+<button class="btn consult"
+onclick="window.location.href='consultancy.html'">
+
+Consult
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- FIRM 8 -->
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600&auto=format&fit=crop">
+
+<div class="content">
+
+<h2>
+Apex Legal Consultancy
+</h2>
+
+<div class="location">
+Ahmedabad, India
+</div>
+
+<p class="desc">
+Business arbitration and dispute resolution experts.
+</p>
+
+<div class="btns">
+
+<button class="btn profile"
+onclick="window.location.href='Force-firm-profile.html#apex'">
+
+View Profile
+
+</button>
+
+<button class="btn consult"
+onclick="window.location.href='consultancy.html'">
+
+Consult
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 LegalForce | All Rights Reserved
+
+</footer>
+
+</body>
+</html>

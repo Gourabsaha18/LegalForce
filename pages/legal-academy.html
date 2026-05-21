@@ -1,0 +1,1653 @@
+<!-- ===================================================== -->
+<!-- FULL UPDATED legal-academy.html -->
+<!-- PROFESSIONAL UPDATED VERSION -->
+<!-- ===================================================== -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Legal Academy | LegalForce</title>
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+
+/* =========================
+GLOBAL
+========================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f5f7fa;
+color:#222;
+overflow-x:hidden;
+}
+
+/* =========================
+HEADER
+========================= */
+
+.top-header{
+background:#111;
+padding:18px 60px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:999;
+}
+
+.logo{
+font-size:34px;
+font-weight:700;
+color:white;
+}
+
+.logo span{
+color:#ff2d2d;
+}
+
+/* =========================
+NAVBAR
+========================= */
+
+.navbar{
+background:#1d1d1d;
+padding:18px 60px;
+display:flex;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.navbar a{
+color:white;
+text-decoration:none;
+font-weight:500;
+transition:.3s;
+}
+
+.navbar a:hover{
+color:#ff2d2d;
+}
+
+/* =========================
+HERO
+========================= */
+
+.hero{
+
+height:520px;
+
+background:
+linear-gradient(rgba(0,0,0,.78),
+rgba(0,0,0,.78)),
+url('https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=1600&auto=format&fit=crop');
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+text-align:center;
+
+padding:20px;
+
+color:white;
+}
+
+.hero-content h1{
+font-size:72px;
+margin-bottom:20px;
+}
+
+.hero-content p{
+font-size:22px;
+max-width:900px;
+margin:auto;
+line-height:1.8;
+color:#ddd;
+}
+
+.hero-buttons{
+margin-top:35px;
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:15px 30px;
+border-radius:10px;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+display:inline-block;
+}
+
+.primary-btn{
+background:#ff2d2d;
+color:white;
+}
+
+.primary-btn:hover{
+background:white;
+color:#111;
+}
+
+.secondary-btn{
+background:white;
+color:#111;
+}
+
+.secondary-btn:hover{
+background:#ff2d2d;
+color:white;
+}
+
+/* =========================
+SMALL ACCESS SECTION
+========================= */
+
+.small-access-section{
+
+padding:30px 60px;
+
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+
+margin-top:-70px;
+position:relative;
+z-index:10;
+}
+
+.small-access-box{
+
+width:380px;
+
+background:white;
+
+padding:28px;
+
+border-radius:20px;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.08);
+
+transition:.3s;
+}
+
+.small-access-box:hover{
+transform:translateY(-5px);
+}
+
+.small-access-box h3{
+font-size:24px;
+margin-bottom:20px;
+}
+
+.small-access-box ul{
+list-style:none;
+margin-bottom:25px;
+}
+
+.small-access-box ul li{
+margin-bottom:14px;
+padding-left:24px;
+position:relative;
+color:#555;
+}
+
+.small-access-box ul li::before{
+content:'✓';
+position:absolute;
+left:0;
+color:#ff2d2d;
+font-weight:bold;
+}
+
+.small-access-box button{
+
+width:100%;
+
+padding:14px;
+
+border:none;
+
+border-radius:10px;
+
+background:#111;
+
+color:white;
+
+font-size:15px;
+font-weight:600;
+
+cursor:pointer;
+
+transition:.3s;
+}
+
+.small-access-box button:hover{
+background:#ff2d2d;
+}
+
+.premium-box{
+border:2px solid #ff2d2d;
+}
+
+.premium-box h3{
+color:#ff2d2d;
+}
+
+/* =========================
+SECTION
+========================= */
+
+.section{
+padding:90px 60px;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:60px;
+}
+
+.section-title h2{
+font-size:48px;
+margin-bottom:15px;
+}
+
+.section-title p{
+font-size:18px;
+color:#666;
+}
+
+/* =========================
+GRID
+========================= */
+
+.card-grid{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+}
+
+/* =========================
+CARD
+========================= */
+
+.card{
+background:white;
+padding:35px;
+border-radius:24px;
+box-shadow:
+0 10px 30px rgba(0,0,0,.08);
+
+transition:.3s;
+position:relative;
+overflow:hidden;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card i{
+font-size:48px;
+color:#ff2d2d;
+margin-bottom:20px;
+}
+
+.card h3{
+font-size:30px;
+margin-bottom:15px;
+}
+
+.card p{
+color:#666;
+line-height:1.8;
+margin-bottom:25px;
+}
+
+.card button{
+background:#111;
+color:white;
+border:none;
+padding:14px 22px;
+border-radius:10px;
+cursor:pointer;
+font-weight:600;
+transition:.3s;
+}
+
+.card button:hover{
+background:#ff2d2d;
+}
+
+/* =========================
+BADGE
+========================= */
+
+.premium-badge{
+position:absolute;
+top:18px;
+right:18px;
+background:#ff2d2d;
+color:white;
+padding:8px 15px;
+border-radius:50px;
+font-size:12px;
+font-weight:600;
+}
+
+/* =========================
+PREMIUM SECTION
+========================= */
+
+.premium-section{
+background:#111;
+color:white;
+}
+
+.premium-section .section-title p{
+color:#ccc;
+}
+
+.premium-card{
+background:#1f1f1f;
+color:white;
+}
+
+.premium-card p{
+color:#bbb;
+}
+
+/* =========================
+INTERNSHIP
+========================= */
+
+.internship-box{
+background:white;
+padding:35px;
+border-radius:24px;
+box-shadow:
+0 10px 30px rgba(0,0,0,.08);
+}
+
+.internship-box h3{
+font-size:28px;
+margin-bottom:15px;
+}
+
+.internship-box p{
+line-height:1.8;
+color:#666;
+margin-bottom:20px;
+}
+
+/* =========================
+QUIZ
+========================= */
+
+.quiz-box{
+background:white;
+padding:50px;
+border-radius:25px;
+box-shadow:
+0 10px 30px rgba(0,0,0,.08);
+
+text-align:center;
+}
+
+.quiz-box h3{
+font-size:42px;
+margin-bottom:20px;
+}
+
+.quiz-options{
+display:grid;
+gap:18px;
+margin-top:30px;
+}
+
+.quiz-options button{
+padding:16px;
+border:none;
+border-radius:12px;
+background:#111;
+color:white;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+}
+
+.quiz-options button:hover{
+background:#ff2d2d;
+}
+
+/* =========================
+FOOTER
+========================= */
+
+.footer{
+background:#111;
+color:white;
+padding:60px 30px;
+text-align:center;
+margin-top:50px;
+}
+
+.footer-links{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-bottom:20px;
+}
+
+.footer-links a{
+color:white;
+text-decoration:none;
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media(max-width:768px){
+
+.top-header{
+padding:18px 20px;
+}
+
+.navbar{
+padding:15px 20px;
+gap:18px;
+}
+
+.hero-content h1{
+font-size:42px;
+}
+
+.hero-content p{
+font-size:16px;
+}
+
+.section{
+padding:60px 20px;
+}
+
+.section-title h2{
+font-size:34px;
+}
+
+.small-access-section{
+padding:20px;
+margin-top:-40px;
+}
+
+.small-access-box{
+width:100%;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header class="top-header">
+
+<div class="logo">
+
+Legal<span>Force</span>
+
+</div>
+
+</header>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<a href="../index.html">Home</a>
+
+<a href="top-stories.html">Top Stories</a>
+
+<a href="articles.html">Articles</a>
+
+<a href="consultancy.html">Consultancy</a>
+
+<a href="membership.html">Membership</a>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>
+
+Legal Academy
+
+</h1>
+
+<p>
+
+Premium legal learning platform for law students,
+judiciary aspirants and advocates.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#notes"
+class="btn primary-btn">
+
+Premium Notes
+
+</a>
+
+<a href="#drafting"
+class="btn secondary-btn">
+
+Drafting Store
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SMALL ACCESS SECTION -->
+
+<section class="small-access-section">
+
+<div class="small-access-box free-box">
+
+<h3>
+
+FREE ACCESS
+
+</h3>
+
+<ul>
+
+<li>Legal News</li>
+
+<li>Articles</li>
+
+<li>Court Updates</li>
+
+<li>Consultancy Browsing</li>
+
+<li>Basic Academy Access</li>
+
+</ul>
+
+<button>
+
+Free Access
+
+</button>
+
+</div>
+
+<div class="small-access-box premium-box">
+
+<h3>
+
+PREMIUM ACCESS
+
+</h3>
+
+<ul>
+
+<li>Drafting Templates</li>
+
+<li>Premium Study Materials</li>
+
+<li>Premium PDFs</li>
+
+<li>Judiciary Prep Materials</li>
+
+<li>Bare Act Notes</li>
+
+<li>Moot Court Drafts</li>
+
+</ul>
+
+<button onclick="buyItem('Legal Academy Premium - ₹999')">
+
+Unlock ₹999
+
+</button>
+
+</div>
+
+</section>
+
+<!-- PREMIUM NOTES -->
+
+<section class="section premium-section"
+id="notes">
+
+<div class="section-title">
+
+<h2>
+
+Premium Study Materials
+
+</h2>
+
+<p>
+
+Semester notes, judiciary materials and premium PDFs.
+
+</p>
+
+</div>
+
+<div class="card-grid">
+
+<div class="card premium-card">
+
+<span class="premium-badge">
+
+PDF
+
+</span>
+
+<i class="fa-solid fa-book"></i>
+
+<h3>
+
+Constitutional Law Notes
+
+</h3>
+
+<p>
+
+Complete constitutional law notes with landmark cases.
+
+</p>
+
+<button onclick="buyItem('Constitutional Notes - ₹149')">
+
+Buy PDF ₹149
+
+</button>
+
+</div>
+
+<div class="card premium-card">
+
+<span class="premium-badge">
+
+PDF
+
+</span>
+
+<i class="fa-solid fa-scale-balanced"></i>
+
+<h3>
+
+Bare Act Notes
+
+</h3>
+
+<p>
+
+Simplified Bare Act notes for judiciary preparation.
+
+</p>
+
+<button onclick="buyItem('Bare Act Notes - ₹199')">
+
+Buy Notes ₹199
+
+</button>
+
+</div>
+
+<div class="card premium-card">
+
+<span class="premium-badge">
+
+PDF
+
+</span>
+
+<i class="fa-solid fa-graduation-cap"></i>
+
+<h3>
+
+Judiciary Preparation Bundle
+
+</h3>
+
+<p>
+
+MCQs, PYQs, interview prep and answer writing materials.
+
+</p>
+
+<button onclick="buyItem('Judiciary Bundle - ₹499')">
+
+Unlock ₹499
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- REPLACE YOUR OLD AI + MOOT SECTION -->
+<!-- WITH THIS FULL PROFESSIONAL VERSION -->
+<!-- ========================================= -->
+
+<!-- AI LEGAL ASSISTANT -->
+
+<section class="academy-section ai-section">
+
+  <div class="academy-heading">
+
+    <h2>
+      AI Legal Assistant
+    </h2>
+
+    <p>
+      Get instant legal guidance, article summaries,
+      drafting help and constitutional explanations.
+    </p>
+
+  </div>
+
+  <div class="ai-container">
+
+    <!-- LEFT -->
+
+    <div class="ai-left">
+
+      <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop">
+
+    </div>
+
+    <!-- RIGHT -->
+
+    <div class="ai-right">
+
+      <div class="ai-box">
+
+        <h3>
+          Ask AI Assistant
+        </h3>
+
+        <textarea
+          id="aiQuestion"
+          placeholder="Example: Explain Article 21 of Indian Constitution"></textarea>
+
+        <button onclick="generateLegalAnswer()">
+
+          Ask AI
+
+        </button>
+
+      </div>
+
+      <div class="ai-response"
+           id="aiResponse">
+
+        AI legal response will appear here...
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- PREMIUM MOOT COURT SECTION -->
+<!-- ========================================= -->
+
+<section class="academy-section moot-section">
+
+  <div class="academy-heading">
+
+    <h2>
+      Premium Moot Court Hub
+    </h2>
+
+    <p>
+      Access premium memorial drafts,
+      oral arguments, international moot materials
+      and advocacy resources.
+    </p>
+
+  </div>
+
+  <!-- PREMIUM LOCK -->
+
+  <div class="premium-lock">
+
+    <div class="lock-icon">
+      🔒
+    </div>
+
+    <h3>
+      Premium Access Required
+    </h3>
+
+    <p>
+
+      Subscribe to LegalForce Premium
+      to unlock Moot Court Drafts,
+      Memorials, Oral Arguments,
+      International Moot Resources,
+      and Competition Materials.
+
+    </p>
+
+    <a href="membership.html"
+       class="premium-btn-big">
+
+       Upgrade Membership
+
+    </a>
+
+  </div>
+
+  <!-- PREMIUM CARDS -->
+
+  <div class="moot-grid locked-content">
+
+    <!-- CARD 1 -->
+
+    <div class="moot-card">
+
+      <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="moot-content">
+
+        <h3>
+          Constitutional Moot Memorial
+        </h3>
+
+        <p>
+          Professional constitutional law memorial drafting.
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- CARD 2 -->
+
+    <div class="moot-card">
+
+      <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="moot-content">
+
+        <h3>
+          Oral Advocacy Notes
+        </h3>
+
+        <p>
+          Learn advanced oral argument strategies.
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- CARD 3 -->
+
+    <div class="moot-card">
+
+      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="moot-content">
+
+        <h3>
+          Jessup Moot Preparation
+        </h3>
+
+        <p>
+          International moot court preparation resources.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- ADD THIS CSS -->
+<!-- ========================================= -->
+
+<style>
+
+/* AI SECTION */
+
+.ai-section,
+.moot-section{
+
+  padding:80px 60px;
+}
+
+.academy-heading{
+
+  text-align:center;
+  margin-bottom:60px;
+}
+
+.academy-heading h2{
+
+  font-size:42px;
+  margin-bottom:15px;
+}
+
+.academy-heading p{
+
+  color:#666;
+  font-size:18px;
+  max-width:850px;
+  margin:auto;
+  line-height:1.8;
+}
+
+.ai-container{
+
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:center;
+}
+
+.ai-left img{
+
+  width:100%;
+  height:520px;
+  object-fit:cover;
+  border-radius:25px;
+}
+
+.ai-box{
+
+  background:white;
+  padding:35px;
+  border-radius:25px;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+  margin-bottom:25px;
+}
+
+.ai-box h3{
+
+  font-size:28px;
+  margin-bottom:20px;
+}
+
+.ai-box textarea{
+
+  width:100%;
+  height:180px;
+  border:1px solid #ddd;
+  border-radius:15px;
+  padding:20px;
+  resize:none;
+  font-size:16px;
+  margin-bottom:20px;
+}
+
+.ai-box button{
+
+  background:#ff2d2d;
+  color:white;
+  border:none;
+  padding:16px 28px;
+  border-radius:12px;
+  cursor:pointer;
+  font-size:16px;
+  font-weight:600;
+}
+
+.ai-response{
+
+  background:#111;
+  color:white;
+  padding:30px;
+  border-radius:20px;
+  min-height:180px;
+  line-height:1.8;
+}
+
+/* PREMIUM LOCK */
+
+.premium-lock{
+
+  background:white;
+  text-align:center;
+  padding:50px;
+  border-radius:30px;
+  margin-bottom:50px;
+
+  box-shadow:
+  0 10px 30px rgba(0,0,0,.08);
+}
+
+.lock-icon{
+
+  font-size:70px;
+  margin-bottom:20px;
+}
+
+.premium-lock h3{
+
+  font-size:36px;
+  margin-bottom:15px;
+}
+
+.premium-lock p{
+
+  color:#666;
+  max-width:700px;
+  margin:auto;
+  line-height:1.8;
+  margin-bottom:30px;
+}
+
+.premium-btn-big{
+
+  background:#ff2d2d;
+  color:white;
+  text-decoration:none;
+  padding:16px 35px;
+  border-radius:12px;
+  font-weight:600;
+  display:inline-block;
+}
+
+/* LOCKED CONTENT */
+
+.locked-content{
+
+  filter:blur(4px);
+  pointer-events:none;
+  opacity:.6;
+}
+
+/* MOOT GRID */
+
+.moot-grid{
+
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fit,minmax(320px,1fr));
+
+  gap:30px;
+}
+
+.moot-card{
+
+  background:white;
+  border-radius:25px;
+  overflow:hidden;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.moot-card img{
+
+  width:100%;
+  height:230px;
+  object-fit:cover;
+}
+
+.moot-content{
+
+  padding:25px;
+}
+
+.moot-content h3{
+
+  margin-bottom:15px;
+  font-size:24px;
+}
+
+.moot-content p{
+
+  color:#666;
+  line-height:1.8;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+  .ai-container{
+
+    grid-template-columns:1fr;
+  }
+
+  .ai-section,
+  .moot-section{
+
+    padding:60px 20px;
+  }
+
+}
+
+</style>
+
+<!-- ========================================= -->
+<!-- ADD THIS JAVASCRIPT BEFORE </body> -->
+<!-- ========================================= -->
+
+<script>
+
+function generateLegalAnswer(){
+
+  const question =
+    document.getElementById("aiQuestion").value.toLowerCase();
+
+  const response =
+    document.getElementById("aiResponse");
+
+  if(question.trim() === ""){
+
+    response.innerHTML =
+    "Please enter a legal question.";
+
+    return;
+  }
+
+  /* ARTICLE 21 */
+
+  if(question.includes("article 21")){
+
+    response.innerHTML = `
+
+      <h3>
+        Article 21 — Right to Life
+      </h3>
+
+      <br>
+
+      Article 21 of the Indian Constitution states:
+
+      <br><br>
+
+      “No person shall be deprived of his life
+      or personal liberty except according to
+      procedure established by law.”
+
+      <br><br>
+
+      It protects:
+      <ul style="margin-top:15px; padding-left:20px;">
+        <li>Right to dignity</li>
+        <li>Right to privacy</li>
+        <li>Right to livelihood</li>
+        <li>Right to legal aid</li>
+      </ul>
+
+    `;
+
+  }
+
+  /* ARTICLE 14 */
+
+  else if(question.includes("article 14")){
+
+    response.innerHTML = `
+
+      <h3>
+        Article 14 — Equality Before Law
+      </h3>
+
+      <br>
+
+      Article 14 guarantees equality before law
+      and equal protection of laws to every person
+      within India.
+
+      <br><br>
+
+      It prevents arbitrary state action
+      and ensures fairness in governance.
+
+    `;
+
+  }
+
+  /* FIR */
+
+  else if(question.includes("fir")){
+
+    response.innerHTML = `
+
+      <h3>
+        FIR Meaning
+      </h3>
+
+      <br>
+
+      FIR stands for First Information Report.
+
+      <br><br>
+
+      It is the first step in criminal proceedings
+      where police record information regarding
+      a cognizable offence.
+
+    `;
+
+  }
+
+  /* DEFAULT */
+
+  else{
+
+    response.innerHTML = `
+
+      <h3>
+        AI Legal Assistant
+      </h3>
+
+      <br>
+
+      This is a prototype AI response system.
+
+      <br><br>
+
+      Your question:
+      <strong>
+        "${question}"
+      </strong>
+
+      <br><br>
+
+      In full version LegalForce AI can provide:
+      <ul style="margin-top:15px; padding-left:20px;">
+
+        <li>Legal research</li>
+
+        <li>Case law summaries</li>
+
+        <li>Judgment analysis</li>
+
+        <li>Drafting assistance</li>
+
+        <li>Bare act explanation</li>
+
+        <li>Constitutional law guidance</li>
+
+      </ul>
+
+    `;
+  }
+
+}
+
+</script>
+
+<!-- DRAFTING STORE -->
+
+<section class="section"
+id="drafting">
+
+<div class="section-title">
+
+<h2>
+
+Legal Drafting Store
+
+</h2>
+
+<p>
+
+Professional drafting templates for advocates and students.
+
+</p>
+
+</div>
+
+<div class="card-grid">
+
+<div class="card">
+
+<span class="premium-badge">
+
+DRAFT
+
+</span>
+
+<i class="fa-solid fa-file-signature"></i>
+
+<h3>
+
+Bail Application Draft
+
+</h3>
+
+<p>
+
+Editable criminal bail drafting template.
+
+</p>
+
+<button onclick="buyItem('Bail Draft - ₹99')">
+
+Unlock ₹99
+
+</button>
+
+</div>
+
+<div class="card">
+
+<span class="premium-badge">
+
+DRAFT
+
+</span>
+
+<i class="fa-solid fa-file-contract"></i>
+
+<h3>
+
+Legal Notice Draft
+
+</h3>
+
+<p>
+
+Professional legal notice format for advocates.
+
+</p>
+
+<button onclick="buyItem('Legal Notice Draft - ₹149')">
+
+Unlock ₹149
+
+</button>
+
+</div>
+
+<div class="card">
+
+<span class="premium-badge">
+
+DRAFT
+
+</span>
+
+<i class="fa-solid fa-scale-balanced"></i>
+
+<h3>
+
+Moot Court Drafts
+
+</h3>
+
+<p>
+
+Memorials and written submission drafting templates.
+
+</p>
+
+<button onclick="buyItem('Moot Court Drafts - ₹299')">
+
+Unlock ₹299
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- INTERNSHIPS -->
+
+<section class="section">
+
+<div class="section-title">
+
+<h2>
+
+Internship Opportunities
+
+</h2>
+
+<p>
+
+Legal internships for students and fresh graduates.
+
+</p>
+
+</div>
+
+<div class="card-grid">
+
+<div class="internship-box">
+
+<h3>
+
+Supreme Court Internship
+
+</h3>
+
+<p>
+
+Research internship under senior advocates.
+
+</p>
+
+<a href="#"
+class="btn primary-btn">
+
+Apply Now
+
+</a>
+</div>
+
+<div class="internship-box">
+
+<h3>
+
+Law Firm Internship
+
+</h3>
+
+<p>
+
+Corporate drafting and litigation exposure.
+
+</p>
+
+<a href="#"
+class="btn primary-btn">
+
+Apply Now
+
+</a>
+
+</div>
+
+<div class="internship-box">
+
+<h3>
+
+Remote Legal Internship
+
+</h3>
+
+<p>
+
+Remote legal work with startups and legal firms.
+
+</p>
+
+<a href="#"
+class="btn primary-btn">
+
+Apply Now
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- QUIZ -->
+
+<section class="section">
+
+<div class="quiz-box">
+
+<h3>
+
+Daily Legal Quiz
+
+</h3>
+
+<p>
+
+Which Article guarantees Equality Before Law?
+
+</p>
+
+<div class="quiz-options">
+
+<button onclick="correctAnswer()">
+
+Article 14
+
+</button>
+
+<button>
+
+Article 19
+
+</button>
+
+<button>
+
+Article 21
+
+</button>
+
+<button>
+
+Article 32
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+<div class="footer-links">
+
+<a href="about.html">About</a>
+
+<a href="contact.html">Contact</a>
+
+<a href="privacy.html">Privacy</a>
+
+<a href="terms.html">Terms</a>
+
+</div>
+
+<p>
+
+© 2026 LegalForce Academy
+
+</p>
+
+</footer>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+function buyItem(item){
+
+alert(
+"Payment Successful!\n\n" +
+item +
+"\n\nYour download is now available."
+);
+
+}
+
+function correctAnswer(){
+
+alert(
+"Correct Answer: Article 14"
+);
+
+}
+
+</script>
+
+</body>
+
+</html>
